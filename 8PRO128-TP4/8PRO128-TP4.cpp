@@ -27,14 +27,14 @@ int main()
 	std::cout << "Demonstrating exception handling for two classes:" << std::endl;
 
 	std::cout << "PieceWorker:" << std::endl;
-	PieceWorker pw("John", "Doe", Date(11, 3, 1971), 1.5, 1);
-	pw.fakeException();
+	PieceWorker* pw = new PieceWorker("John", "Doe", Date(11, 3, 1971), 1.5, 1);
+	pw->fakeException();
 
 	std::cout << std::endl;
 
 	std::cout << "HourlyWorker:" << std::endl;
-	HourlyWorker hw("John", "Doe", Date(11, 3, 1971), 1.5, 1);
-	hw.fakeException();
+	HourlyWorker* hw = new HourlyWorker("John", "Doe", Date(11, 3, 1971), 1.5, 1);
+	hw->fakeException();
 
 	std::cout << std::endl;
 
@@ -56,5 +56,6 @@ int main()
 
 	std::cout << std::endl;
 
+	delete pw, hw, b1, b2;
 	return 0;
 }
