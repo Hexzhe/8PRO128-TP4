@@ -89,3 +89,19 @@ void PieceWorker::print() const
 		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
 	}
 }
+
+void PieceWorker::fakeException()
+{
+	try
+	{
+		throw std::exception();
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
+}

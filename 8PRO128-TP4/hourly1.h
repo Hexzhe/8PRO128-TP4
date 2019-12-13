@@ -11,6 +11,7 @@ public:
 	void setHours(double);
 	virtual double earnings(Date) const;
 	virtual void print() const;
+	void fakeException();
 private:
 	double wage;   // wage per hour
 	double hours;  // hours worked for week

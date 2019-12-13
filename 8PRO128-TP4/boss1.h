@@ -14,10 +14,10 @@ public:
 	virtual double earnings(Date) const;
 	virtual void print() const;
 
-private:
-	/* Here will be the instance stored. */
-	static Boss* instance;
+	Boss(const Boss&) = delete;
+	Boss& operator=(const Boss&) = delete;
 
+private:
 	/* Private constructor to prevent instancing. */
 	Boss(const char* first, const char* last, Date bd, double s);
 

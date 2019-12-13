@@ -11,7 +11,7 @@ public:
 	void setQuantity(int);
 	virtual double earnings(Date) const;
 	virtual void print() const;
-
+	void fakeException();
 private:
 	double wagePerPiece; // wage for each piece output
 	int quantity;        // output for week

@@ -91,3 +91,19 @@ void HourlyWorker::print() const
 		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
 	}
 }
+
+void HourlyWorker::fakeException()
+{
+	try
+	{
+		throw std::exception();
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
+}

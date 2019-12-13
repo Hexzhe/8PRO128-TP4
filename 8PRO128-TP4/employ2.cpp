@@ -20,14 +20,8 @@ Employee::Employee()
 // the first and last names into the object.
 Employee::Employee(const char *first, const char *last, Date bd)
 {
-	firstName = new char[strlen(first) + 1];
-	assert(firstName != 0); // test that new worked
-	//strcpy(firstName, first); //had to remove this, added the 16 random (as for line 23)
-	strcpy_s(firstName, 16, first);
-	lastName = new char[strlen(last) + 1];
-	assert(lastName != 0); // test that new worked
-	strcpy_s(lastName, 16, last);
-
+	firstName = _strdup(first);
+	lastName = _strdup(last);
 	birthDate = bd;
 }
 

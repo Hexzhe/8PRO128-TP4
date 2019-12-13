@@ -8,17 +8,10 @@ Boss::Boss(const char* first, const char* last, Date bd, double s) : Employee(fi
 	weeklySalary = s > 0 ? s : 0;
 }
 
-/* Null, because instance will be initialized on demand. */
-Boss* Boss::instance = 0;
-
 Boss* Boss::getInstance(const char* first, const char* last, Date bd, double s)
 {
-	if (instance == 0)
-	{
-		instance = new Boss(first, last, bd, s);
-	}
-
-	return instance;
+	static Boss instance(first, last, bd, s);
+	return &instance;
 }
 
 // Set the Boss's salary
