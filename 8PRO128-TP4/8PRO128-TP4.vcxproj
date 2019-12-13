@@ -125,45 +125,23 @@
   <ItemGroup>
     <ClCompile Include="8PRO128-TP4.cpp" />
     <ClCompile Include="boss1.cpp" />
-    <ClCompile Include="Carre.cpp" />
-    <ClCompile Include="Cercle.cpp" />
     <ClCompile Include="commis1.cpp" />
-    <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Date.cpp" />
-    <ClCompile Include="Ellipse.cpp" />
     <ClCompile Include="employ2.cpp" />
-    <ClCompile Include="Figure.cpp" />
     <ClCompile Include="hourly1.cpp" />
     <ClCompile Include="piece1.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
-    <ClCompile Include="Sphere.cpp" />
-    <ClCompile Include="Tetraedre.cpp" />
-    <ClCompile Include="Triangle.cpp" />
-    <ClCompile Include="TriangleEq.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ResourceFiles\TP4.docx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="boss1.h" />
-    <ClInclude Include="Carre.h" />
-    <ClInclude Include="Cercle.h" />
     <ClInclude Include="commis1.h" />
-    <ClInclude Include="Cube.h" />
     <ClInclude Include="Date.h" />
-    <ClInclude Include="Ellipse.h" />
     <ClInclude Include="employ2.h" />
-    <ClInclude Include="Figure.h" />
     <ClInclude Include="hourly1.h" />
     <ClInclude Include="LazyExceptionHandler.h" />
     <ClInclude Include="piece1.h" />
-    <ClInclude Include="Point.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="Segment.h" />
-    <ClInclude Include="Sphere.h" />
-    <ClInclude Include="Tetraedre.h" />
-    <ClInclude Include="Triangle.h" />
-    <ClInclude Include="TriangleEq.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

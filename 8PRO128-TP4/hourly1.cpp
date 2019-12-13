@@ -96,7 +96,7 @@ void HourlyWorker::fakeException()
 {
 	try
 	{
-		throw std::exception();
+		throw std::exception("This is a test (HourlyWorker)");
 	}
 	catch (const std::exception & ex)
 	{

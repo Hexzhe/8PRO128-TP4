@@ -10,7 +10,7 @@
 			   Partie 1: Implémentation d'une gestion des exceptions 
 			   (deux types d'exceptions; std::exception et "...") 
 			   dans les classes .
-			   Partie 2: Traduction d'un diagramme en classes 
+			   Partie 2: Traduction d'un diagramme UML en classes 
 			   (Entreprise, Camion et Moteur).
 			   Partie 3: Transformer la classe "Boss" en singleton
 			   pour qu'elle ne puisse pas être instancié plus d'une fois.

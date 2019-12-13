@@ -94,7 +94,7 @@ void PieceWorker::fakeException()
 {
 	try
 	{
-		throw std::exception();
+		throw std::exception("This is a test (PieceWorker)");
 	}
 	catch (const std::exception & ex)
 	{
