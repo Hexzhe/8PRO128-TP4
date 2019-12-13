@@ -8,6 +8,13 @@
 #include <cassert>
 #include "employ2.h"
 
+Employee::Employee()
+{
+	firstName = (char*)"John";
+	lastName = (char*)"Doe";
+	birthDate = Date(11, 3, 1971);
+}
+
 // Constructor dynamically allocates space for the
 // first and last name and uses strcpy to copy
 // the first and last names into the object.

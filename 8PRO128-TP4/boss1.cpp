@@ -3,12 +3,11 @@
 
 #include "boss1.h"
 
-// Constructor function for class Boss
-Boss::Boss(const char *first, const char *last, Date bd, double s) : Employee(first, last, bd)  // call base-class constructor
+Boss::Boss(const char* first, const char* last, Date bd, double s) : Employee(first, last, bd)
 {
 	try
 	{
-		setWeeklySalary(s);
+		weeklySalary = s > 0 ? s : 0;
 	}
 	catch (const std::exception & ex)
 	{
@@ -19,12 +18,37 @@ Boss::Boss(const char *first, const char *last, Date bd, double s) : Employee(fi
 		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
 	}
 }
+
+/* Null, because instance will be initialized on demand. */
+Boss* Boss::instance = 0;
+
+Boss* Boss::getInstance(const char* first, const char* last, Date bd, double s)
+{
+	try
+	{
+		if (instance == 0)
+		{
+			instance = new Boss(first, last, bd, s);
+		}
+
+		return instance;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
+}
+
 // Set the Boss's salary
 void Boss::setWeeklySalary(double s)
 {
 	try
 	{
-		weeklySalary = s > 0 ? s : 0;
+		getInstance()->weeklySalary = s > 0 ? s : 0;
 	}
 	catch (const std::exception & ex)
 	{
@@ -40,7 +64,7 @@ double Boss::earnings(Date d) const
 { 
 	try
 	{
-		return weeklySalary + (d.isSameMonth(birthDate) ? 100 : 0);
+		return getInstance()->weeklySalary + (d.isSameMonth(getInstance()->birthDate) ? 100 : 0);
 	}
 	catch (const std::exception & ex)
 	{
@@ -58,7 +82,7 @@ void Boss::print() const
 	try
 	{
 		std::cout << "               Boss: ";
-		Employee::print();
+		getInstance()->Employee::print();
 	}
 	catch (const std::exception & ex)
 	{

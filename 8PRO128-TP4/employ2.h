@@ -7,6 +7,7 @@
 
 class Employee {
 public:
+	Employee();
 	Employee(const char *, const char *, Date bd);
 	~Employee(); // destructor reclaims memory
 
@@ -18,7 +19,7 @@ public:
 	virtual void print() const; // virtual
 
 	Date birthDate;
-private:
+protected:
 	char *firstName;
 	char *lastName;
 };
