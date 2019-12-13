@@ -9,7 +9,7 @@
 			   précédent (TP3).
 			   Partie 1: Implémentation d'une gestion des exceptions 
 			   (deux types d'exceptions; std::exception et "...") 
-			   dans toutes les classes d'employés.
+			   dans les classes .
 			   Partie 2: Traduction d'un diagramme en classes 
 			   (Entreprise, Camion et Moteur).
 			   Partie 3: Transformer la classe "Boss" en singleton
@@ -30,7 +30,7 @@ int main()
 {
 	//Partie 1
 	std::cout << "===== Partie 1 =====" << std::endl;
-	//TODO
+	std::cout << ""
 
 	//Partie 2
 	std::cout << "===== Partie 2 =====" << std::endl;
