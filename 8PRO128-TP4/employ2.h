@@ -1,6 +1,7 @@
 // Abstract base class Employee
 #include <ctime>
 #include "Date.h"
+#include "LazyExceptionHandler.h"
 #ifndef EMPLOY2_H
 #define EMPLOY2_H
 

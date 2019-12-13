@@ -8,7 +8,8 @@
 			   L'ensemble du TP de base sur le code du travail 
 			   précédent (TP3).
 			   Partie 1: Implémentation d'une gestion des exceptions 
-			   dans les classes {TODO} et {TODO}.
+			   (deux types d'exceptions; std::exception et "...") 
+			   dans toutes les classes d'employés.
 			   Partie 2: Traduction d'un diagramme UML en classes 
 			   (Entreprise, Camion et Moteur).
 			   Partie 3: Transformer la classe "Boss" en Singleton

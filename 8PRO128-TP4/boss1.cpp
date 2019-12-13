@@ -6,22 +6,66 @@
 // Constructor function for class Boss
 Boss::Boss(const char *first, const char *last, Date bd, double s) : Employee(first, last, bd)  // call base-class constructor
 {
-	setWeeklySalary(s);
+	try
+	{
+		setWeeklySalary(s);
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 // Set the Boss's salary
 void Boss::setWeeklySalary(double s)
 {
-	weeklySalary = s > 0 ? s : 0;
+	try
+	{
+		weeklySalary = s > 0 ? s : 0;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 // Get the Boss's pay
 double Boss::earnings(Date d) const 
 { 
-	return weeklySalary + (d.isSameMonth(birthDate) ? 100 : 0);
+	try
+	{
+		return weeklySalary + (d.isSameMonth(birthDate) ? 100 : 0);
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Print the Boss's name 
 void Boss::print() const
 {
-	std::cout << "               Boss: ";
-	Employee::print();
+	try
+	{
+		std::cout << "               Boss: ";
+		Employee::print();
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 } 

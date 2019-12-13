@@ -5,7 +5,6 @@
 #include "employ2.h"
 
 class CommissionWorker : public Employee {
-
 public:
 	CommissionWorker(const char *, const char *, Date bd, double = 0.0, double = 0.0, int = 0);
 	void setSalary(double);

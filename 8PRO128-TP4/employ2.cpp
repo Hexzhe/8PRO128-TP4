@@ -13,22 +13,44 @@
 // the first and last names into the object.
 Employee::Employee(const char *first, const char *last, Date bd)
 {
-	firstName = new char[strlen(first) + 1];
-	assert(firstName != 0); // test that new worked
-	//strcpy(firstName, first); //had to remove this, added the 16 random (as for line 23)
-	strcpy_s(firstName, 16, first);
-	lastName = new char[strlen(last) + 1];
-	assert(lastName != 0); // test that new worked
-	strcpy_s(lastName, 16, last);
+	try
+	{
+		firstName = new char[strlen(first) + 1];
+		assert(firstName != 0); // test that new worked
+		//strcpy(firstName, first); //had to remove this, added the 16 random (as for line 23)
+		strcpy_s(firstName, 16, first);
+		lastName = new char[strlen(last) + 1];
+		assert(lastName != 0); // test that new worked
+		strcpy_s(lastName, 16, last);
 
-	birthDate = bd;
+		birthDate = bd;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Destructor deallocates dynamically allocated memory
 Employee::~Employee()
 {
-	delete[] firstName;
-	delete[] lastName;
+	try
+	{
+		delete[] firstName;
+		delete[] lastName;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Return a pointer to the first name
@@ -37,7 +59,18 @@ Employee::~Employee()
 // deletes dynamic storage to prevent undefined pointer.
 const char *Employee::getFirstName() const
 {
-	return firstName;   // caller must delete memory
+	try
+	{
+		return firstName;   // caller must delete memory
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Return a pointer to the last name
@@ -46,12 +79,33 @@ const char *Employee::getFirstName() const
 // deletes dynamic storage to prevent undefined pointer.
 const char *Employee::getLastName() const
 {
-	return lastName;   // caller must delete memory
-
+	try
+	{
+		return lastName;   // caller must delete memory
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Print the name of the Employee
 void Employee::print() const
 {
-	std::cout << firstName << ' ' << lastName << std::endl;
+	try
+	{
+		std::cout << firstName << ' ' << lastName << std::endl;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 } 

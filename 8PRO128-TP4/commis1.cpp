@@ -6,38 +6,104 @@
 // Constructor for class CommissionWorker
 CommissionWorker::CommissionWorker(const char *first, const char *last, Date bd, double s, double c, int q) : Employee(first, last, bd)  // call base-class constructor
 {
-	setSalary(s);
-	setCommission(c);
-	setQuantity(q);
+	try
+	{
+		setSalary(s);
+		setCommission(c);
+		setQuantity(q);
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Set CommissionWorker's weekly base salary
 void CommissionWorker::setSalary(double s)
 {
-	salary = s > 0 ? s : 0;
+	try
+	{
+		salary = s > 0 ? s : 0;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Set CommissionWorker's commission
 void CommissionWorker::setCommission(double c)
 {
-	commission = c > 0 ? c : 0;
+	try
+	{
+		commission = c > 0 ? c : 0;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Set CommissionWorker's quantity sold
 void CommissionWorker::setQuantity(int q)
 {
-	quantity = q > 0 ? q : 0;
+	try
+	{
+		quantity = q > 0 ? q : 0;
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Determine CommissionWorker's earnings
 double CommissionWorker::earnings(Date d) const
 {
-	return (salary + commission * quantity) + (d.isSameMonth(birthDate) ? 100 : 0);
+	try
+	{
+		return (salary + commission * quantity) + (d.isSameMonth(birthDate) ? 100 : 0);
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }
 
 // Print the CommissionWorker's name 
 void CommissionWorker::print() const
 {
-	std::cout << "  Commission worker: ";
-	Employee::print();
+	try
+	{
+		std::cout << "  Commission worker: ";
+		Employee::print();
+	}
+	catch (const std::exception & ex)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButDontDoAnythingToAddressIt(ex.what());
+	}
+	catch (...)
+	{
+		LazyExceptionHandler::TellMeWhatsWrongButVeryVaguelyAndDontDoAnythingToAddressIt();
+	}
 }

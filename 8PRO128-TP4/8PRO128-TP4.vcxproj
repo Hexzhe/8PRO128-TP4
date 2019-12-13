@@ -155,6 +155,7 @@
     <ClInclude Include="employ2.h" />
     <ClInclude Include="Figure.h" />
     <ClInclude Include="hourly1.h" />
+    <ClInclude Include="LazyExceptionHandler.h" />
     <ClInclude Include="piece1.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Rectangle.h" />
