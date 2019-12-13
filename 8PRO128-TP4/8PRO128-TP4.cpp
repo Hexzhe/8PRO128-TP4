@@ -12,9 +12,8 @@
 			   dans toutes les classes d'employés.
 			   Partie 2: Traduction d'un diagramme en classes 
 			   (Entreprise, Camion et Moteur).
-			   Partie 3: Transformer la classe "Boss" en Singleton
-			   (ne peut pas être instancié plus d'une fois)
-			   pour qu'un Employee ne puisse pas avoir plus d'un patron.
+			   Partie 3: Transformer la classe "Boss" en singleton
+			   pour qu'elle ne puisse pas être instancié plus d'une fois.
 **************************************************************************/
 
 #include <iostream>
@@ -40,16 +39,13 @@ int main()
 	//Partie 3
 	std::cout << "===== Partie 3 =====" << std::endl;
 
-	std::cout << "Ici on a transformé la classe Boss en singleton, c'est à dire qu'une seule instance peut exister tout au long du programme." << std::endl;
-	std::cout << "On essai donc d'en instancier deux a la suite: " << std::endl;
+	std::cout << "Instanciation double d'un singleton:" << std::endl;
 	
 	Boss* b1 = Boss::getInstance();
 	std::cout << "Instance 1: " << b1 << std::endl;
 
 	Boss* b2 = Boss::getInstance();
 	std::cout << "Instance 2: " << b2 << std::endl;
-
-	std::cout << "On voit qu'ils pointent tous les deux sur la même instance alors que pourtant on a utilise la meme fonction Boss::getInstance() sans instancier quoi que ce soit au preallable." << std::endl;
 	
 	return 0;
 }
