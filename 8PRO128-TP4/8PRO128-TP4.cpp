@@ -49,7 +49,7 @@ int main()
 	//Moteur* m = new Moteur(); //Impossible
 
 	Camion* c = new Camion();
-	std::cout << "Creation d'un camion: " << c->getMarque() << ", " << c->getModele() << ", " << c->getAnnee() << std::endl;
+	std::cout << "Creation d'un camion: " << c->getMarque() << " " << c->getModele() << " " << c->getAnnee() << std::endl;
 
 	e->addCamion(*c);
 	std::cout << "Ajout du camion a l'entreprise:" << std::endl;
