@@ -1,8 +1,9 @@
 #include "Entreprise.h"
 
-Entreprise::Entreprise()
+Entreprise::Entreprise(std::string nom)
 {
 	this->camions = new std::vector<Camion>();
+	this->nom = nom;
 }
 
 Entreprise::~Entreprise()

@@ -5,7 +5,7 @@
 class Entreprise
 {
 public:
-	Entreprise();
+	Entreprise(std::string nom = "No Name Inc.");
 	~Entreprise();
 
 	void addCamion(Camion camion);

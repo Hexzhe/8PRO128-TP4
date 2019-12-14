@@ -18,4 +18,3 @@ private:
 	std::string modele;
 	int annee;
 };
-

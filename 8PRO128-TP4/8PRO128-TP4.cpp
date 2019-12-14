@@ -19,6 +19,7 @@
 #include "piece1.h"
 #include "hourly1.h"
 #include "boss1.h"
+#include "Entreprise.h"
 
 int main()
 {
@@ -40,7 +41,20 @@ int main()
 
 	//Partie 2
 	std::cout << "===== Partie 2 =====" << std::endl;
-	//TODO
+
+	Entreprise* e = new Entreprise();
+	std::cout << "Creation d'une entreprise: " << e->getNom() << std::endl;
+	std::cout << "  Nb de camion(s): " << e->countCamion() << std::endl;
+
+	//Moteur* m = new Moteur(); //Impossible
+
+	Camion* c = new Camion();
+	std::cout << "Creation d'un camion: " << c->getMarque() << ", " << c->getModele() << ", " << c->getAnnee() << std::endl;
+
+	e->addCamion(*c);
+	std::cout << "Ajout du camion a l'entreprise:" << std::endl;
+	std::cout << "  Nb de camion(s): " << e->countCamion() << std::endl;
+
 	std::cout << std::endl;
 
 	//Partie 3
@@ -56,6 +70,6 @@ int main()
 
 	std::cout << std::endl;
 
-	delete pw, hw, b1, b2;
+	delete pw, hw, e, c, b1, b2;
 	return 0;
 }
