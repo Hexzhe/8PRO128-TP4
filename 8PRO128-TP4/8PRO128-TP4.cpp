@@ -25,7 +25,7 @@ int main()
 {
 	//Partie 1
 	std::cout << "===== Partie 1 =====" << std::endl;
-	std::cout << "Demonstrating exception handling for two classes:" << std::endl;
+	std::cout << "Demonstration de la gestion d'exception pour deux classes" << std::endl;
 
 	std::cout << "PieceWorker:" << std::endl;
 	PieceWorker* pw = new PieceWorker("John", "Doe", Date(11, 3, 1971), 1.5, 1);
